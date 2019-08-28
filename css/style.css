@@ -1,0 +1,44 @@
+/*
+
+*/
+/* 1 General */
+
+.basic-container {
+  max-width: 1310px;
+}
+
+/* 2 Header */
+
+header {
+  background-color: #F72210;
+}
+
+.st0 {
+  fill:white;
+}
+
+.singin-link {
+
+}
+
+.subs-link img {
+  max-width: 50px;
+}
+
+.genericon-menu > span{
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.genericon-menu::before, .genericon-menu::after {
+    content: "";
+}
+
+.genericon-menu > span, .genericon-menu::before, .genericon-menu::after {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background-color: #fb9a94;
+    margin-left: auto;
+    margin-right: auto;
+}
