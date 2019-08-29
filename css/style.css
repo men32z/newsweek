@@ -1,44 +1,191 @@
 /*
-
+  1 General
+  2 Header
+    2.1 Menu Nav
+  3 Content
+  4 Footer
+  5 Media Querys
+    5.1 Header
 */
+
 /* 1 General */
+
+/* imports */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap');
+
+/* variables */
+
+:root {
+  --main-red: #f72210;
+}
+
+body {
+  background-color: #f4f5f6;
+}
 
 .basic-container {
   max-width: 1310px;
 }
 
+.position-relative {
+  position: relative;
+}
+
 /* 2 Header */
 
 header {
-  background-color: #F72210;
+  color: white;
+  font: 16px/34px "Roboto Condensed",sans-serif;
+  background-color: var(--main-red);
 }
 
-.st0 {
-  fill:white;
+.header {
+  height: 95px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 15px;
 }
 
-.singin-link {
+.logo {
+  max-width: 395px;
+}
 
+a.singin-link {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 6px 3px;
+  font: bold 18px "Roboto Condensed",sans-serif;
+}
+
+a.subs-link {
+  text-decoration: none;
+  background-color: white;
+  color: var(--main-red);
+  text-transform: uppercase;
+  font: bold 18px "Roboto Condensed",sans-serif;
+  padding: 3px 12px;
 }
 
 .subs-link img {
-  max-width: 50px;
+  max-width: 8px;
+  margin-top: -2px;
+  margin-left: 9px;
 }
 
-.genericon-menu > span{
-  margin-top: 4px;
-  margin-bottom: 4px;
+/* 2.1 Menu Nav*/
+nav {
+  position: relative;
+  width: 100%;
+  background-color: white;
+  padding: 15px 0;
+  padding-right: 160px;
+  border-bottom: #f4f5f6 solid 2px;
 }
 
-.genericon-menu::before, .genericon-menu::after {
-    content: "";
+nav ul::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  content: "";
+  display: block;
+  width: 66px;
+  background-color: var(--main-red);
+  border-left: 12px solid white;
+  border-top: 13px solid var(--main-red);
 }
 
-.genericon-menu > span, .genericon-menu::before, .genericon-menu::after {
+nav ul {
+  list-style: none;
+  margin-bottom: 0;
+  width: 100%;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  flex-grow: 1;
+  text-align: center;
+  border-left: solid  #d9d9d9 1px;
+  display: inline;
+}
+
+nav ul li:nth-child(1){
+  border: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 21px;
+    line-height: 24px;
+    font-weight: bold;
+    font-family: "Roboto Condensed",sans-serif;
+    color:black;
+}
+
+nav ul li a:hover {
+  text-decoration: none;
+  color: var(--main-red);
+}
+
+.search-bar {
+  position: absolute;
+  z-index: 100;
+  right: 102px;
+  top:0px;
+  width: 60px;
+  height: 54px;
+}
+.search-bar input {
+  width: 60px;
+  height: 100%;
+  border: none;
+}
+
+.genericon-menu {
+  display: none;
+}
+
+.search-icon {
+  background: url(../images/icon-search-glass.svg) center/contain no-repeat white;
+  width: 20px;
+  height: 20px;
+  clip: auto;
+  right: -15px;
+  top: 17px;
+  font-size: 0;
+  position: absolute;
+}
+
+/* -------------------
+  5 Media Querys
+*/
+
+@media (max-width:991px) {
+
+  .genericon-menu {
     display: block;
-    width: 30px;
-    height: 4px;
-    background-color: #fb9a94;
-    margin-left: auto;
-    margin-right: auto;
+  }
+
+  .genericon-menu > span{
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
+
+  .genericon-menu::before, .genericon-menu::after {
+      content: "";
+  }
+
+  .genericon-menu > span, .genericon-menu::before, .genericon-menu::after {
+      display: block;
+      width: 30px;
+      height: 4px;
+      background-color: #fb9a94;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
 }
