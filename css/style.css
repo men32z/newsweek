@@ -24,6 +24,13 @@ body {
   background-color: #f4f5f6;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Roboto Condensed",sans-serif;
+    margin-bottom: 10px;
+    position: relative;
+    color: black;
+}
+
 .basic-container {
   max-width: 1310px;
 }
@@ -176,6 +183,112 @@ main.basic-container {
   padding-right: 45px;
 }
 
+.block-section {
+  padding: 0;
+}
+
+.middle-section {
+  padding: 0 15px;
+}
+
+.culture-and-travel {
+  background-color: #f4f5f7;
+  margin: 0 0 20px 0;
+}
+
+.culture-and-travel article:nth-child(even) .art-wrapper {
+  margin-left: -15px;
+}
+
+.culture-and-travel article:nth-child(odd) .art-wrapper {
+  margin-right: -15px;
+}
+
+.culture-and-travel article span {
+  display: block;
+}
+
+.culture-and-travel article span a {
+  background-color: #c2d4d7;
+  text-decoration: none;
+  color: rgb(39, 39, 39);
+  padding-left: 6px;
+  padding-right: 6px;
+  margin-right: 6px;
+  margin-bottom: 6px;
+}
+
+.culture-and-travel article span a:hover {
+  background-color: #272727;
+  color: #c2d4d7;
+}
+
+.culture-and-travel article p {
+  font: 15px/20px "Helvetica Neue","Helvetica",Arial,sans-serif;
+  color: rgba(39,39,39,.5);
+  margin-bottom: 10px;
+}
+
+.art-title {
+  color: rgb(39, 39, 39);
+  font: 20px/22px "Lora",serif;
+}
+
+.art-title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.title-block {
+  color: rgba(3,3,3,.4);
+  font: bold 16px/16px "Roboto Condensed",sans-serif;
+  padding-bottom: 11px;
+  text-transform: uppercase;
+}
+
+.featured-article {
+  padding-bottom: 20px;
+}
+
+.art-wrapper {
+  position: relative;
+  min-height: 33px;
+  margin-bottom: 10px;
+}
+
+.art-wrapper span {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  font: bold 17px/16px "Roboto Condensed",sans-serif;
+  color: #f72210;
+  padding: 8px 15px 9px;
+  background-color: rgba(255,255,255,.9);
+  z-index: 1;
+  cursor: pointer;
+}
+
+.art-wrapper picture {
+  width: 100%;
+}
+
+.art-wrapper picture img {
+  width: 100%;
+}
+.featured-article h3 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.featured-article h3 a:hover {
+  text-decoration: underline #f72210;
+}
+
+.featured-article p {
+  font-size: 15px;
+  line-height: 20px;
+}
+
 /* -------------------
   4 Footer
   --------------------
@@ -283,6 +396,14 @@ footer div ul li a:hover {
   --------------------
 */
 
+@media (max-width:767px) {
+  .culture-and-travel article .art-wrapper {
+    margin-right: -15px !important;
+    margin-left: -15px !important;
+  }
+}
+
+
 @media (max-width:991px) {
 
   /* 5.1 Header */
@@ -320,4 +441,11 @@ footer div ul li a:hover {
       margin-right: auto;
   }
 
+}
+
+@media (min-width: 768px) {
+  h3 {
+    font-size: 24px;
+    line-height: 24px;
+  }
 }
