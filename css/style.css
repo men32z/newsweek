@@ -24,11 +24,16 @@ body {
   background-color: #f4f5f6;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: "Roboto Condensed",sans-serif;
-    margin-bottom: 10px;
-    position: relative;
-    color: black;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto Condensed", sans-serif;
+  margin-bottom: 10px;
+  position: relative;
+  color: black;
 }
 
 .basic-container {
@@ -67,7 +72,7 @@ a.singin-link {
   text-transform: uppercase;
   display: inline-block;
   padding: 6px 3px;
-  font: bold 18px "Roboto Condensed",sans-serif;
+  font: bold 18px "Roboto Condensed", sans-serif;
 }
 
 a.subs-link {
@@ -75,7 +80,7 @@ a.subs-link {
   background-color: white;
   color: var(--main-red);
   text-transform: uppercase;
-  font: bold 18px "Roboto Condensed",sans-serif;
+  font: bold 18px "Roboto Condensed", sans-serif;
   padding: 3px 12px;
 }
 
@@ -85,7 +90,7 @@ a.subs-link {
   margin-left: 9px;
 }
 
-/* 2.1 Menu Nav*/
+/* 2.1 Menu Nav */
 
 nav {
   position: relative;
@@ -124,7 +129,14 @@ nav ul li {
   display: inline;
 }
 
-nav ul li:nth-child(1){
+footer div ul li {
+  margin: 6px 10px 6px 0;
+  border-right: 1px solid #d9d9d9;
+  padding-right: 10px;
+  display: inline-block;
+}
+
+nav ul li:nth-child(1) {
   border: none;
 }
 
@@ -133,8 +145,43 @@ nav ul li a {
   font-size: 21px;
   line-height: 24px;
   font-weight: bold;
-  font-family: "Roboto Condensed",sans-serif;
-  color:black;
+  font-family: "Roboto Condensed", sans-serif;
+  color: black;
+}
+
+footer div ul li a {
+  color: #666;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.art-title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.featured-article h3 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.culture-and-travel article span a {
+  background-color: #c2d4d7;
+  text-decoration: none;
+  color: rgb(39, 39, 39);
+  padding-left: 6px;
+  padding-right: 6px;
+  margin-right: 6px;
+  margin-bottom: 6px;
+}
+
+.more-stories article h4 a {
+  font-weight: 700;
+  font-family: "Roboto Condensed", sans-serif;
+  color: black;
+  font-size: 17px;
+  line-height: 20px;
 }
 
 nav ul li a:hover {
@@ -142,18 +189,57 @@ nav ul li a:hover {
   color: var(--main-red);
 }
 
+footer div ul li a:hover {
+  color: black;
+  text-decoration: none;
+}
+
 .search-bar {
   position: absolute;
   z-index: 100;
   right: 102px;
-  top:0px;
+  top: 0;
   width: 60px;
   height: 54px;
 }
+
 .search-bar input {
+  right: 0;
   width: 60px;
   height: 100%;
+  z-index: 150;
+  background-color: white;
   border: none;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.search-bar input:focus {
+  width: 100%;
+  outline: none;
+  padding-left: 20px;
+}
+
+.search-bar input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.search-bar input:focus::-moz-placeholder {  /* Firefox 19+ */
+  color: transparent;
+}
+
+.search-bar input:focus:-moz-placeholder { /* Firefox 18- */
+  color: transparent;
+}
+
+.search-bar input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.search-bar:focus-within {
+  width: calc(100% - 102px);
 }
 
 .genericon-menu {
@@ -196,6 +282,12 @@ main.basic-container {
   margin: 0 0 20px 0;
 }
 
+.art-wrapper {
+  position: relative;
+  min-height: 33px;
+  margin-bottom: 10px;
+}
+
 .culture-and-travel article:nth-child(even) .art-wrapper {
   margin-left: -15px;
 }
@@ -204,18 +296,24 @@ main.basic-container {
   margin-right: -15px;
 }
 
+.art-wrapper span {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  font: bold 17px/16px "Roboto Condensed", sans-serif;
+  color: #f72210;
+  padding: 8px 15px 9px;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 1;
+  cursor: pointer;
+}
+
 .culture-and-travel article span {
   display: block;
 }
 
-.culture-and-travel article span a {
-  background-color: #c2d4d7;
-  text-decoration: none;
-  color: rgb(39, 39, 39);
-  padding-left: 6px;
-  padding-right: 6px;
-  margin-right: 6px;
-  margin-bottom: 6px;
+.featured-article h3 a:hover {
+  text-decoration: underline #f72210;
 }
 
 .culture-and-travel article span a:hover {
@@ -223,25 +321,25 @@ main.basic-container {
   color: #c2d4d7;
 }
 
+.featured-article p {
+  font-size: 15px;
+  line-height: 20px;
+}
+
 .culture-and-travel article p {
-  font: 15px/20px "Helvetica Neue","Helvetica",Arial,sans-serif;
-  color: rgba(39,39,39,.5);
+  font: 15px/20px "Helvetica Neue", "Helvetica", Arial, sans-serif;
+  color: rgba(39, 39, 39, 0.5);
   margin-bottom: 10px;
 }
 
 .art-title {
   color: rgb(39, 39, 39);
-  font: 20px/22px "Lora",serif;
-}
-
-.art-title a {
-  color: inherit;
-  text-decoration: none;
+  font: 20px/22px "Lora", serif;
 }
 
 .title-block {
-  color: rgba(3,3,3,.4);
-  font: bold 16px/16px "Roboto Condensed",sans-serif;
+  color: rgba(3, 3, 3, 0.4);
+  font: bold 16px/16px "Roboto Condensed", sans-serif;
   padding-bottom: 11px;
   text-transform: uppercase;
 }
@@ -250,43 +348,18 @@ main.basic-container {
   padding-bottom: 20px;
 }
 
-.art-wrapper {
-  position: relative;
-  min-height: 33px;
-  margin-bottom: 10px;
-}
-
-.art-wrapper span {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  font: bold 17px/16px "Roboto Condensed",sans-serif;
-  color: #f72210;
-  padding: 8px 15px 9px;
-  background-color: rgba(255,255,255,.9);
-  z-index: 1;
-  cursor: pointer;
-}
-
 .art-wrapper picture {
   width: 100%;
 }
 
+.social-icons img {
+  max-width: 26px;
+  cursor: pointer;
+  filter: invert(39%) sepia(1%) saturate(0%) hue-rotate(265deg) brightness(98%) contrast(92%);
+}
+
 .art-wrapper picture img {
   width: 100%;
-}
-.featured-article h3 a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.featured-article h3 a:hover {
-  text-decoration: underline #f72210;
-}
-
-.featured-article p {
-  font-size: 15px;
-  line-height: 20px;
 }
 
 /* -------------------
@@ -299,12 +372,6 @@ footer.basic-container {
   padding-left: 60px;
   padding-right: 60px;
   color: rgb(102, 102, 102);
-}
-
-.social-icons img {
-  max-width: 26px;
-  cursor: pointer;
-  filter: invert(39%) sepia(1%) saturate(0%) hue-rotate(265deg) brightness(98%) contrast(92%);
 }
 
 .social-icons img.i-fb:hover {
@@ -334,34 +401,12 @@ footer.basic-container {
 footer div ul {
   list-style: none;
   display: inline;
-}
-
-footer div ul {
   margin: 0;
   padding: 0;
 }
 
-footer div ul li {
-  margin: 6px 10px 6px 0;
-  border-right: 1px solid #d9d9d9;
-  padding-right: 10px;
-  display: inline-block;
-}
-
 footer div ul li:nth-last-child(1) {
   border: none;
-}
-
-footer div ul li a {
-  color: #666;
-  font-family:Arial, Helvetica, sans-serif;
-  font-size:14px;
-  text-decoration: none;
-}
-
-footer div ul li a:hover {
-  color:black;
-  text-decoration: none;
 }
 
 .footer-links label {
@@ -391,21 +436,49 @@ footer div ul li a:hover {
   text-transform: uppercase;
   color: #666;
 }
+
+/* 10x */
+
+.more-stories article {
+  padding-top: 14px;
+  padding-bottom: 14px;
+  border-top: 1px solid #ddd;
+  clear: both;
+}
+
+.more-stories article picture {
+  margin-bottom: 10px;
+  margin-right: 15px;
+  float: left;
+}
+
+.more-stories article picture img {
+  width: 135px;
+  height: 90px;
+}
+
+.more-stories article h4 a:hover {
+  text-decoration: underline #f72210;
+}
+
 /* -------------------
   5 Media Querys
   --------------------
 */
 
-@media (max-width:767px) {
+@media (max-width: 767px) {
   .culture-and-travel article .art-wrapper {
     margin-right: -15px !important;
     margin-left: -15px !important;
   }
+
+  .more-stories article picture img {
+    width: 258px;
+    height: 172px;
+  }
 }
 
-
-@media (max-width:991px) {
-
+@media (max-width: 991px) {
   /* 5.1 Header */
 
   .header {
@@ -423,24 +496,26 @@ footer div ul li a:hover {
     margin-bottom: -3px;
   }
 
-  .genericon-menu > span{
+  .genericon-menu > span {
     margin-top: 4px;
     margin-bottom: 4px;
   }
 
-  .genericon-menu::before, .genericon-menu::after {
-      content: "";
+  .genericon-menu::before,
+  .genericon-menu::after {
+    content: "";
   }
 
-  .genericon-menu > span, .genericon-menu::before, .genericon-menu::after {
-      display: block;
-      width: 30px;
-      height: 4px;
-      background-color: #fb9a94;
-      margin-left: auto;
-      margin-right: auto;
+  .genericon-menu > span,
+  .genericon-menu::before,
+  .genericon-menu::after {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background-color: #fb9a94;
+    margin-left: auto;
+    margin-right: auto;
   }
-
 }
 
 @media (min-width: 768px) {
