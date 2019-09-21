@@ -443,6 +443,22 @@ main.basic-container {
   display: block;
 }
 
+.slideshows .art-wrapper span {
+  width: 70px;
+  height: 52px;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 45px;
+  text-indent: 5px;
+  text-align: center;
+  background: url(https://g.newsweek.com/themes/newsweek/images/icon-slideshows-nw.png) 0 0/contain no-repeat;
+  color: #e9212e;
+}
+
 .featured-article h3 a:hover {
   text-decoration: underline #f72210;
 }
@@ -622,6 +638,84 @@ footer div ul li:nth-last-child(1) {
   flex-direction: column;
 }
 
+.l-s-title {
+  width: 100%;
+  padding-top:25px;
+  padding-bottom: 11px;
+  border-top: 1px solid #d9d9d9;
+}
+
+
+.l-s-title a {
+  color: #f72210;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 22px;
+  text-transform: none;
+}
+
+.last-section h4 a {
+  font-weight: 700;
+  color: inherit;
+  text-decoration: none;
+}
+
+.last-section h4 a:hover {
+  text-decoration: underline #f72210;
+}
+
+.last-section ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.last-section ul li {
+  display: flex;
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.last-section ul li:nth-child(1){
+  border-top: none;
+  padding-top: 0;
+}
+
+.last-section ul li a img {
+  margin-right: 15px;
+  width: 135px;
+}
+
+.last-section ul li a {
+  text-decoration: none;
+  font: bold 17px/21px "Roboto Condensed", sans-serif;
+  color: black;
+}
+
+.last-section ul li a:hover {
+  color: #f72210;
+}
+
+.newsletter {
+    background: url(https://d.newsweek.com/en/full/1525348/newsletter-promo-home-page.png?w=397&h=265&q=90&f=172a044c08b5e64f42dcb61b425487bf) center center / cover no-repeat;
+    width: 48%;
+}
+
+.pf-info {
+  width: 52%;
+  border: 1px solid #ebebeb;
+  padding: 30px;
+  border-left-width: 0;
+}
+
+.pf-second-box {
+  padding:0 !important; 
+  display: flex;
+  -webkit-flex: 1;
+  flex: 1;
+}
+
 /* -------------------
   5 Media Querys
   --------------------
@@ -644,6 +738,22 @@ footer div ul li:nth-last-child(1) {
 
   .i-t-m div {
     margin-bottom: 20px;
+  }
+  .last-section ul li a img {
+    width: 258px;
+  }
+
+  .last-section div a img {
+    width: 100%;
+  }
+
+  .item-i-t-m picture img {
+    max-width: none;
+    max-height: none;
+  }
+
+  .art-wrapper img {
+    width: 100%;
   }
 }
 
