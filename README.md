@@ -5,7 +5,7 @@ This project requests students to build a replica of the news site Newsweek.com 
 
 ## Live Version:
 
-You can check the live version [here](https://raw.githack.com/men32z/newsweek-clone/feature-branch/index.html)
+You can check the live version [here](https://men32z.github.io/newsweek-clone/)
 
 ## Source Page:
 
